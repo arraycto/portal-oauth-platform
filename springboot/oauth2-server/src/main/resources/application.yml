@@ -1,0 +1,32 @@
+server:
+  port: 8081
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2SESSION
+
+spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://47.111.161.63:7001/portal?useUnicode=true&characterEncoding=utf8&useSSL=false
+#    username: root
+#    password: mlgjpassword
+  jackson:
+    default-property-inclusion: non_null
+  data:
+    mongodb:
+      uri: mongodb://kerrysmec.cn:27017/portal
+
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  mapper-locations: classpath:mapper/*Mapper.xml
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core: DEBUG
+
